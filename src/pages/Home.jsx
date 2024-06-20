@@ -32,7 +32,7 @@ function Home() {
       ) : (
         <div className="min-h-[80vh] grid sm:grid-cols-2 justify-center items-center max-w-screen-xl md:grid-cols-3 lg:grid-cols-4   mx-auto p-3 ">
           {products && products.length
-            ? products.map((item) => <Cards product={item} />)
+            ? products.map((item, i) => <Cards key={i} product={item} />)
             : "No Products to show"}
         </div>
       )}

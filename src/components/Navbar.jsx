@@ -1,5 +1,8 @@
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+
 function Navbar() {
+  const { cart } = useSelector((state) => state);
   return (
     <nav className="flex flex-col md:flex-row items-center justify-between mx-auto py-4 px-5 lg:px-52 bg-gray-100">
       <Link to={"/"}>
@@ -18,7 +21,7 @@ function Navbar() {
           to={"/cart"}
           className="px-3 text-lg hover:text-blue-700 cursor-pointer"
         >
-          Cart
+          Cart ({cart.length})
         </Link>
       </div>
     </nav>
