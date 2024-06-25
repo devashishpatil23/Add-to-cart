@@ -12,7 +12,6 @@ function Cart() {
     setTotalCart(cart.reduce((acc, curr) => acc + curr.price, 0));
   }, [cart]);
 
-  console.log(totalCart);
   return (
     <div>
       {cart && cart.length ? (
